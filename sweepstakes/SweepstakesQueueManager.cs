@@ -17,13 +17,12 @@ namespace sweepstakes
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-
+            queue.Enqueue(sweepstakes);
         }
 
         public Sweepstakes GetSweepstakes()
         {
-            string sweepstakesStr = "sweepstakes";
-            Sweepstakes sweepstakes = new Sweepstakes(sweepstakesStr);
+            Sweepstakes sweepstakes = queue.Dequeue();
             return sweepstakes;
         }
     }

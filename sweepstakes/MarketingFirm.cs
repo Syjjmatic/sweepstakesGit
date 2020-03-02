@@ -12,12 +12,12 @@ namespace sweepstakes
 
         public MarketingFirm(ISweepstakesManager manager)
         {
-
+            _manager = manager;
         }
 
         public void CreateSweepstake()
         {
-
+            Sweepstakes sweepstakes = new Sweepstakes(UserInterface.GetUserInputFor(UserInterface.contestNamePrompt));
         }
     }
 }
