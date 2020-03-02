@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 namespace sweepstakes
 {
     class Simulation
-    {
-        ISweepstakesManager manager;
+    {        
         public void CreateMarketingFirmWithManager()
         {
+            ISweepstakesManager manager;
+
             if (true)
             {
                 manager = new SweepstakesStackManager();
