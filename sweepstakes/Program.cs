@@ -12,7 +12,6 @@ namespace sweepstakes
         {
             Simulation simulation = new Simulation();
             simulation.RunSimulation();
-            Console.ReadLine();
         }
     }
 }

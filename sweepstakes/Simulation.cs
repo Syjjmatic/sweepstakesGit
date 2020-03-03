@@ -41,8 +41,8 @@ namespace sweepstakes
 
         public void RunSimulation()
         {
-            CreateMarketingFirmWithManager();
-            marketingFirm.RunMarketingFirm();            
+            //CreateMarketingFirmWithManager();
+            //marketingFirm.RunMarketingFirm();            
         }
     }
 }

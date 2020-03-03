@@ -9,8 +9,7 @@ namespace sweepstakes
     class MarketingFirm
     {
         ISweepstakesManager manager;
-        Sweepstakes sweepstakes;
-        Contestant winner;
+        Sweepstakes sweepstakes;        
 
         public MarketingFirm(ISweepstakesManager manager)
         {
@@ -20,6 +19,7 @@ namespace sweepstakes
         public void CreateSweepstake()
         {
             sweepstakes = new Sweepstakes(UserInterface.GetUserInputFor(UserInterface.contestNamePrompt));
+            manager.InsertSweepstakes(sweepstakes);
         }
 
         public void CreateContestants()
@@ -36,11 +36,11 @@ namespace sweepstakes
 
         public void RunMarketingFirm() // this show that code works
         {
-            CreateSweepstake();
-            manager.InsertSweepstakes(sweepstakes);
-            CreateContestants();
-            winner = sweepstakes.PickWinner();
-            sweepstakes.PrintContestantInfo(winner);
+            //CreateSweepstake();
+            //CreateContestants();
+            //Contestant winner = sweepstakes.PickWinner();            
+            //sweepstakes.PrintContestantInfo(winner);
+            //sweepstakes.NotifyContestants(winner);
         }
     }
 }
