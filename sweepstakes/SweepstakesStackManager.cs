@@ -12,7 +12,7 @@ namespace sweepstakes
 
         public SweepstakesStackManager()
         {
-
+            stack = new Stack<Sweepstakes>();
         }
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
@@ -22,8 +22,7 @@ namespace sweepstakes
 
         public Sweepstakes GetSweepstakes()
         {
-            Sweepstakes sweepstakes = stack.Pop();
-            return sweepstakes;
+            return stack.Pop();
         }
     }
 }

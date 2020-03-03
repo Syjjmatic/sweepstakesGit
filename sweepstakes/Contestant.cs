@@ -13,12 +13,11 @@ namespace sweepstakes
         public string emailAddress;
         public int registrationNumber;
 
-        public Contestant(int registrationNumber)
+        public Contestant()
         {
             firstName = UserInterface.GetUserInputFor(UserInterface.contestantFirstNamePrompt);
             lastName =  UserInterface.GetUserInputFor(UserInterface.contestantLastNamePrompt);
             emailAddress = UserInterface.GetUserInputFor(UserInterface.contestantEmailPrompt);
-            this.registrationNumber = registrationNumber;
         }
     }
 }

@@ -10,13 +10,8 @@ namespace sweepstakes
     {
         Dictionary<int, Contestant> contestants;
         string name;
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-        }
+
+        public string Name { get; }
 
         public Sweepstakes(string name)
         {

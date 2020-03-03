@@ -14,6 +14,7 @@ namespace sweepstakes
         public static string contestNamePrompt = "Enter the name of the contest: ";
         public static string queueOrStackPrompt = "Queue or stack the sweepstakes?";
         public static string incorrectInput = "Incorrect input.";
+        public static string howManyContestants = "How many contestants do you want to add?";
         public static Random random = new Random();
 
         public static string GetUserInputFor(string prompt)
@@ -22,17 +23,17 @@ namespace sweepstakes
             return Console.ReadLine();
         }
 
-        public static int GetRegNum(string input)
+        public static int GetInteger(string input)
         {
             bool userInputIsAnInteger = default;
-            int regNumber = default;
+            int intReturn = default;
 
-            while (!userInputIsAnInteger || regNumber < 0)
+            while (!userInputIsAnInteger || intReturn < 0)
             {
-                userInputIsAnInteger = Int32.TryParse(input, out regNumber);
+                userInputIsAnInteger = Int32.TryParse(input, out intReturn);
             }
 
-            return regNumber;
+            return intReturn;
         }
     }
 }

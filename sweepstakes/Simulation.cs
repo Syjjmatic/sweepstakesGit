@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 namespace sweepstakes
 {
     class Simulation
-    {        
+    {
+        MarketingFirm marketingFirm;
+
         public void CreateMarketingFirmWithManager()
         {
             ISweepstakesManager manager = default;
             string userInput;
-            bool isStackOrQueue = false;
+            bool isStackOrQueue = default;
             
             userInput = UserInterface.GetUserInputFor(UserInterface.queueOrStackPrompt);
 
@@ -34,7 +36,13 @@ namespace sweepstakes
                 }
             }          
             
-            MarketingFirm marketingFirm = new MarketingFirm(manager);
+            marketingFirm = new MarketingFirm(manager);
+        }
+
+        public void RunSimulation()
+        {
+            CreateMarketingFirmWithManager();
+            marketingFirm.RunMarketingFirm();            
         }
     }
 }
